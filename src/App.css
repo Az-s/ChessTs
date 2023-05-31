@@ -8,28 +8,31 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .board {
-  width: (64px * 8);
-  height: (64px * 8);
+  width: calc(64px * 8);
+  height: calc(64px * 8);
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid white;
 }
-
 .cell {
   width: 64px;
   height: 64px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
-
+.cell img {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
 .black {
-  background-color: rgb(243, 240, 240);
+  background-color: rgb(44, 44, 44);
 }
-
 .white {
-  background-color: black;
+  background-color: #e6e3df;
 }
