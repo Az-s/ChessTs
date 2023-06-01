@@ -1,4 +1,4 @@
-import { Figure, FigureNames } from "./figure";
+import { Figure, FigureNames } from "./Figure";
 import { Cell } from "../Cell";
 import { Colors } from "../Colors";
 import blackLogo from "../../assets/black-knight.png";
