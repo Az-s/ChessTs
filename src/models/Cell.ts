@@ -15,12 +15,12 @@ export class Cell {
     board: Board,
     x: number,
     y: number,
-    colors: Colors,
+    color: Colors,
     figure: Figure | null
   ) {
     this.x = x;
     this.y = y;
-    this.color = colors;
+    this.color = color;
     this.figure = figure;
     this.board = board;
     this.available = false;
@@ -93,9 +93,16 @@ export class Cell {
     this.figure.cell = this;
   }
 
+  addLostFigure(figure: Figure) {
+    figure.color === Colors.BLACK ? this.board.lostBlackFigures.push(figure) : this.board.lostWhiteFigures.push(figure)
+  }
+
   moveFigure(target: Cell) {
     if (this.figure && this.figure?.canMove(target)) {
       this.figure.moveFigure(target);
+      if(target.figure) {
+        this.addLostFigure(target.figure);
+      }
       target.setFigure(this.figure);
       this.figure = null;
     }

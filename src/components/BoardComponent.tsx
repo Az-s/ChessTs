@@ -11,13 +11,13 @@ interface BoardProps {
   swapPlayer: () => void;
 }
 
-const BoardComponent: FC<BoardProps> = ({
+const BoardComponent = ({
   board,
   setBoard,
   currentPlayer,
   swapPlayer,
-}) => {
-  const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
+} : BoardProps) => {
+  const [selectedCell, setSelectedCell]: any = useState<Cell | null>(null);
 
   const click = (cell: Cell) => {
     if (
