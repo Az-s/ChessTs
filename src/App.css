@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+.player {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 .board {
   width: calc(64px * 8);
   height: calc(64px * 8);
