@@ -17,7 +17,7 @@ const BoardComponent = ({
   currentPlayer,
   swapPlayer,
 } : BoardProps) => {
-  const [selectedCell, setSelectedCell]: any = useState<Cell | null>(null);
+  const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
   const click = (cell: Cell) => {
     if (
